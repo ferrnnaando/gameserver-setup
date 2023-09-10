@@ -5,7 +5,6 @@ Welcome to the comprehensive Ubuntu VPS Setup Guide! This guide will walk you th
 ## Installing on FiveM
 
 ### Prerequisites
-
 Before you begin, ensure you have the following prerequisites:
 
 - **An Linux-based VPS** (In this case, I'll demonstrate the setup using VirtualBox on your local machine).
@@ -35,9 +34,30 @@ If you are using VirtualBox for local development, there is a additional step to
 - Login.
   ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/b048e1d9-1d41-43cf-ab50-d7854533b679)
    
-- Then we are inside,
+- Then we are inside.
   ![image](https://github..om/ferrnnaando/fivem-gameserver-setup/assets/77246868/54109be2-ae7c-44d2-9dce-49953ca42044)
 
 2-. **Firewall && Services Handling**: *The most important step is the firewall without a doubt. Without a good firewall we can get hacked, issues opening the server and a bounch of stuff more.*
 
-- Since we
+- Since our goal is create a Game Server its obvious that the amount of ports that we are going to use will be a little bit high. For Firewall handling we are going to use UFW and IPTables.
+  ### **UFW**
+  ```bash
+  sudo apt-get install ufw
+  sudo ufw enable
+  sudo ufw status
+  sudo ufw allow OpenSSH   # Ensure allowing SSH connections
+  sudo ufw allow 22/tcp    # Ensure allowing SSH connections
+  sudo ufw allow 80/tcp    # Allow outgoing HTTP traffic
+  sudo ufw allow 443/tcp   # Allow outgoing HTTPS traffic
+  sudo ufw allow 3016/tcp  # Allow outgoing MYSQL traffic
+  sudo ufw allow 30110/tcp # FiveM Protocol (Can be specified in the server.cfg)
+  sudo ufw allow 30110/udp # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
+  sudo ufw allow 30120/tcp # FiveM Protocol (Can be specified in the server.cfg)
+  sudo ufw allow 30120/udp # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
+  sudo ufw default deny incoming
+  sudo ufw default allow outgoing
+  sudo ufw status
+  sudo ufw reload
+  sudo systemctl restart ssh
+  sudo reboot
+  ```
