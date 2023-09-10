@@ -25,10 +25,10 @@ If you are using VirtualBox for local development, there are a few additional st
     - Add a port forwarding rule named SSH/TCP/../2222/../22. It should look something like this.
     ![Port Forwarding Rule](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d57c42ac-1603-4e69-bf1e-97bb0f735b01)
 
-2. **ON/OFF Handling**: Since we are going to use SSH connections is very stupid to have the own VM window, so we can "disable"/unshow it. Just Right-Click > Start > Headless Start.
+2. **ON/OFF Handling**: Since we are going to use SSH connections is very stupid to have the own VM window, so we can "disable"/unshow it.
    
-    ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
-I strongly recommend do the same for Stop > ACPI Shutdown.
+   - Right-Click > Start > Headless Start; I strongly recommend do the same for Stop > ACPI Shutdown.
+   ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
 
 4. **SSH Connection**: Before we are able to login through SSH, we will need a SSH client of course. For Windows I strongly recommend using PuTTY. Windows RDP is completely unsafe and trash.
    
