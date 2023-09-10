@@ -17,7 +17,7 @@ Before you begin, ensure you have the following prerequisites:
 
 If you are using VirtualBox for local development, there are a few additional steps to consider.
 
-1. **Port Forwarding**: To allow VirtualBox to connect via SSH, it's recommended to set up port forwarding.
+1. **Port Forwarding**: To allow VirtualBox to connect via SSH, it's recommended to set up port forwarding. This step is not strongly required but is highly recommended.
 
     - Right-click on your Virtual Machine (VM) > Settings > Network > Adapter 1 (usually) > Port Forwarding.
     
