@@ -16,5 +16,6 @@ Before you begin, make sure you have the following prerequisites:
 2. Update the package list and upgrade installed packages:
 
    ```bash
-   sudo apt update
-   sudo apt upgrade
+   sudo apt update && sudo apt upgrade
+   ```
+   
