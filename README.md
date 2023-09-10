@@ -1,4 +1,4 @@
-# Ubuntu VPS Setup Guide
+![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/093c7e4d-d835-40db-9f9c-61978befd12d)# Ubuntu VPS Setup Guide
 
 Welcome to the comprehensive Ubuntu VPS Setup Guide! This guide will walk you through the process of setting up and configuring an Ubuntu VPS for various applications, including game servers and web hosting. Whether you're new to VPS administration or seeking to optimize your server's performance and security, this guide has you covered.
 
@@ -30,5 +30,8 @@ If you are using VirtualBox for local development, there are a few additional st
    - Right-Click > Start > Headless Start; I strongly recommend do the same for Stop > ACPI Shutdown.
    ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
 
-4. **SSH Connection**: Before we are able to login through SSH, we will need a SSH client of course. For Windows I strongly recommend using PuTTY. Windows RDP is completely unsafe and trash.
+4. **SSH Connection**: Before we are able to login through SSH, we will need a SSH client of course. For Windows I strongly recommend using PuTTY. Windows RDP is completely unsafe and trash. After installing the prefered SSH client we need to put our own IP and port 2222.
+
+       - ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/3f3f6cb5-1c57-4792-9cb3-e4002bfe2a3d)
+
    
