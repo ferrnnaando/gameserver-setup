@@ -26,19 +26,15 @@ If you are using VirtualBox for local development, there is an additional step t
 **1.2. ON/OFF Handling**: Since we are going to use SSH connections, it's a good idea to disable or hide the VM window.
 
    - Right-Click > Start > Headless Start; I strongly recommend doing the same for Stop > ACPI Shutdown.
-   ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
+   ![Disable Default Look](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
 
-**1.3. Enabling and Checking SSH**
-
-**1.4. SSH Connection**: Before we can log in through SSH, we will need an SSH client. For Windows, we strongly recommend using PuTTY. After installing the preferred SSH client, enter your IP and port 2222.
+**1.3. SSH Connection**: Before we can log in through SSH, we will need an SSH client. For Windows, we strongly recommend using PuTTY. After installing the preferred SSH client, enter your IP and port 2222.
 
 - Login.
-- 
-![image2](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/b048e1d9-1d41-43cf-ab50-d7854533b679)
+- ![Login in SSH](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/b048e1d9-1d41-43cf-ab50-d7854533b679)
 
-- Login.
-- 
-  ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/54109be2-ae7c-44d2-9dce-49953ca42044)
+- Then we are inside.
+- ![Inside VPS 1.4](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/54109be2-ae7c-44d2-9dce-49953ca42044)
 
 **2. Firewall and Services Handling**: The most critical step is the firewall. Without a good firewall, we risk security issues and server instability.
 
