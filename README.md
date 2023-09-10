@@ -44,36 +44,36 @@ sudo systemctl enable ssh
    - To handle the firewall, we will use UFW (Uncomplicated Firewall) and IPTables.
 
    ### UFW Configuration
-   ```bash
-   # Install UFW and enable it.
-   sudo apt-get install ufw
-   sudo ufw enable
+   > ```bash
+    # Install UFW and enable it.
+    sudo apt-get install ufw
+    sudo ufw enable
+ 
+    # Allow necessary ports.
+    sudo ufw status
+    sudo ufw allow OpenSSH    # Ensure allowing SSH connections
+    sudo ufw allow 22/tcp     # Ensure allowing SSH connections
+    sudo ufw allow 80/tcp     # Allow outgoing HTTP traffic
+    sudo ufw allow 443/tcp    # Allow outgoing HTTPS traffic
+    sudo ufw allow 3016/tcp   # Allow outgoing MYSQL traffic
+    sudo ufw allow 30110/tcp  # FiveM Protocol (specified in server.cfg)
+    sudo ufw allow 30110/udp  # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
+    sudo ufw allow 30120/tcp  # FiveM Protocol (specified in server.cfg)
+    sudo ufw allow 30120/udp  # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
+ 
+    # Set default policies.
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
+ 
+    # Display current status.
+    sudo ufw status
 
-   # Allow necessary ports.
-   sudo ufw status
-   sudo ufw allow OpenSSH    # Ensure allowing SSH connections
-   sudo ufw allow 22/tcp     # Ensure allowing SSH connections
-   sudo ufw allow 80/tcp     # Allow outgoing HTTP traffic
-   sudo ufw allow 443/tcp    # Allow outgoing HTTPS traffic
-   sudo ufw allow 3016/tcp   # Allow outgoing MYSQL traffic
-   sudo ufw allow 30110/tcp  # FiveM Protocol (specified in server.cfg)
-   sudo ufw allow 30110/udp  # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
-   sudo ufw allow 30120/tcp  # FiveM Protocol (specified in server.cfg)
-   sudo ufw allow 30120/udp  # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
-
-   # Set default policies.
-   sudo ufw default deny incoming
-   sudo ufw default allow outgoing
-
-   # Display current status.
-   sudo ufw status
-
-   # Reload UFW and restart SSH.
-   sudo ufw reload
-   sudo systemctl restart ssh
-
-   # Reboot the system to ensure changes was made.
-   sudo reboot
+    # Reload UFW and restart SSH.
+    sudo ufw reload
+    sudo systemctl restart ssh
+ 
+    # Reboot the system to ensure changes was made.
+    sudo reboot
 ```
 
 ### IPTables Configuration
