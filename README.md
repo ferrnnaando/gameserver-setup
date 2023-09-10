@@ -130,4 +130,10 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
 
 **Consideer using Fail2ban:** *Consider using Fail2ban to protect against brute-force login attempts. It can automatically block IP addresses that repeatedly fail login attempts.*
 
-**3-. Keymaster** *Once we have a good securitty we can continue; Go to [FiveM keynaster](https://keymaster.fivem.net/)*
+**3-. Keymaster** *Once we have a good securitty we can continue.*
+
+   - Go to [FiveM keymaster](https://keymaster.fivem.net/) and create one key. To fill in out you will need to know your public IP that can be found on webs like [whatismyippadr](https://whatismyipaddress.com/es/mi-ip)    and the host type, for this case Home Host && Vbox Ubuntu Server.*
+   > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/e423ce7e-844f-4617-a493-e6d8209beebe)
+
+
+
