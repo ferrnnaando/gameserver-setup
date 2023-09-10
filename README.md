@@ -12,10 +12,11 @@ Before you begin, make sure you have the following prerequisites:
 
 ### Step 1: Setting Up Your VPS
 
-1. Connect to your VPS via SSH.
-2. Update the package list and upgrade installed packages:
+# Running Localhost
 
-   ```bash
-   sudo apt update && sudo apt upgrade
-   ```
-   
+If you are running VBox you will have to make a few extra steps.
+
+1. We will need to port forward to let VBox able to connect via SSH. This step is not strongly required but is highly recommended.
+
+Right-click on your VM > Settings > Network > Adapter 1 (Generally is this) > Port Forwardaing
+![Untitled](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/8859547d-62ab-4989-bb61-2233c5e67fa5)
