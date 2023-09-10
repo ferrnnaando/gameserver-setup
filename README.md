@@ -129,3 +129,5 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
 ### Adittional considerations
 
 **Consideer using Fail2ban:** *Consider using Fail2ban to protect against brute-force login attempts. It can automatically block IP addresses that repeatedly fail login attempts.*
+
+**3-. Keymaster** *Once we have a good securitty we can continue; Go to [FiveM keynaster](https://keymaster.fivem.net/)*
