@@ -19,4 +19,5 @@ If you are running VBox you will have to make a few extra steps.
 1. We will need to port forward to let VBox able to connect via SSH. This step is not strongly required but is highly recommended.
 
 Right-click on your VM > Settings > Network > Adapter 1 (Generally is this) > Port Forwardaing
-![Untitled](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/8859547d-62ab-4989-bb61-2233c5e67fa5)
+![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d7229cd7-591c-4634-8857-f323aed2a4fa)
+
