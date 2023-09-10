@@ -18,15 +18,15 @@ If you are using VirtualBox for local development, there is an additional step t
 **1. Port Forwarding**: To allow VirtualBox to connect via SSH, it's recommended to set up port forwarding. This step is not strictly required but highly recommended.
 
    - Right-click on your Virtual Machine (VM) > Settings > Network > Adapter 1 (usually) > Port Forwarding.
-   ![Port Forwarding](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d7229cd7-591c-4634-8857-f323aed2a4fa)
+   > ![Port Forwarding](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d7229cd7-591c-4634-8857-f323aed2a4fa)
 
    - Add a port forwarding rule named SSH/TCP/../2222/../22. It should look something like this.
-   ![Port Forwarding Rule](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d57c42ac-1603-4e69-bf1e-97bb0f735b01)
+   > ![Port Forwarding Rule](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d57c42ac-1603-4e69-bf1e-97bb0f735b01)
 
 **1.2. ON/OFF Handling**: Since we are going to use SSH connections, it's a good idea to disable or hide the VM window.
 
    - Right-Click > Start > Headless Start; I strongly recommend doing the same for Stop > ACPI Shutdown.
-   ![Disable Default Look](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
+   > ![Disable Default Look](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
 
 **1.3. SSH Connection**: Before we can log in through SSH, we will need an SSH client. For Windows, we strongly recommend using PuTTY. After installing the preferred SSH client, enter your IP and port 2222.
 
