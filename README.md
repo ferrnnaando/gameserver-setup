@@ -15,7 +15,7 @@ Before you begin, ensure you have the following prerequisites:
 
 If you are using VirtualBox for local development, there is an additional step to consider.
 
-**1. Port Forwarding**: To allow VirtualBox to connect via SSH, it's recommended to set up port forwarding. This step is not strictly required but highly recommended.
+**1. Port Forwarding**: *To allow VirtualBox to connect via SSH, it's recommended to set up port forwarding. This step is not strictly required but highly recommended.*
 
    - Right-click on your Virtual Machine (VM) > Settings > Network > Adapter 1 (usually) > Port Forwarding.
    > ![Port Forwarding](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d7229cd7-591c-4634-8857-f323aed2a4fa)
@@ -23,18 +23,18 @@ If you are using VirtualBox for local development, there is an additional step t
    - Add a port forwarding rule named SSH/TCP/../2222/../22. It should look something like this.
    > ![Port Forwarding Rule](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d57c42ac-1603-4e69-bf1e-97bb0f735b01)
 
-**1.2. ON/OFF Handling**: Since we are going to use SSH connections, it's a good idea to disable or hide the VM window.
+**1.2. ON/OFF Handling**: *Since we are going to use SSH connections, it's a good idea to disable or hide the VM window.*
 
    - Right-Click > Start > Headless Start; I strongly recommend doing the same for Stop > ACPI Shutdown.
    > ![Disable Default Look](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
 
-**1.3. SSH Connection**: Before we can log in through SSH, we will need an SSH client. For Windows, we strongly recommend using PuTTY. After installing the preferred SSH client, enter your IP and port 2222.
+**1.3. SSH Connection**: *Before we can log in through SSH, we will need an SSH client. For Windows, we strongly recommend using PuTTY. After installing the preferred SSH client, enter your IP and port 2222.*
 
    - Login.
    > ![Login in SSH](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/b048e1d9-1d41-43cf-ab50-d7854533b679)
    > ![Inside VPS 1.4](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/54109be2-ae7c-44d2-9dce-49953ca42044)
 
-**2. Firewall and Services Handling**: The most critical step is the firewall. Without a good firewall, we risk security issues and server instability.
+**2. Firewall and Services Handling**: *The most critical step is the firewall. Without a good firewall, we risk security issues and server instability.*
 
    - To handle the firewall, we will use UFW (Uncomplicated Firewall) and IPTables.
 
@@ -79,6 +79,17 @@ sudo iptables -P FORWARD DROP
 sudo iptables -P OUTPUT ACCEPT
 
 # Block the amount of login attempts. This can help to mitigate brute-force password attacks and other else. Why your VPS should have more than 3 persons on it? This is very confusing, bad-practice. Just remember to have smart workers that doesnt have to relogin each minute.
-
 sudo iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW -m limit --limit 3/min --limit-burst 3 -j ACCEPT
+
+# You can log denied packets to monitore what's happening.
+sudo iptables -A INPUT -j LOG --log-prefix "IPTABLES-DROP: "
+
+# You can block specifics IP's
+sudo iptables -A INPUT -s 192.168.1.100 -j DROP
+
+# And a lot more, but this is more than enough, this can consideer a good firewall configuration
 ```
+
+### Adittional considerations
+
+**Consideer using Fail2ban:** *Consider using Fail2ban to protect against brute-force login attempts. It can automatically block IP addresses that repeatedly fail login attempts.*
