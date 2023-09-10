@@ -45,18 +45,19 @@ If you are using VirtualBox for local development, there is a additional step to
   sudo apt-get install ufw
   sudo ufw enable
   sudo ufw status
-  sudo ufw allow OpenSSH   # Ensure allowing SSH connections
-  sudo ufw allow 22/tcp    # Ensure allowing SSH connections
-  sudo ufw allow 80/tcp    # Allow outgoing HTTP traffic
-  sudo ufw allow 443/tcp   # Allow outgoing HTTPS traffic
-  sudo ufw allow 3016/tcp  # Allow outgoing MYSQL traffic
-  sudo ufw allow 30110/tcp # FiveM Protocol (Can be specified in the server.cfg)
-  sudo ufw allow 30110/udp # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
-  sudo ufw allow 30120/tcp # FiveM Protocol (Can be specified in the server.cfg)
-  sudo ufw allow 30120/udp # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
+  sudo ufw allow OpenSSH           # Ensure allowing SSH connections
+  sudo ufw allow 22/tcp            # Ensure allowing SSH connections
+  sudo ufw allow 80/tcp            # Allow outgoing HTTP traffic
+  sudo ufw allow 443/tcp           # Allow outgoing HTTPS traffic
+  sudo ufw allow 3016/tcp          # Allow outgoing MYSQL traffic
+  sudo ufw allow 30110/tcp         # FiveM Protocol (Can be specified in the server.cfg)
+  sudo ufw allow 30110/udp         # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
+  sudo ufw allow 30120/tcp         # FiveM Protocol (Can be specified in the server.cfg)
+  sudo ufw allow 30120/udp         # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
   sudo ufw default deny incoming
   sudo ufw default allow outgoing
-  sudo ufw status
+  
+  sudo ufw status  
   sudo ufw reload
   sudo systemctl restart ssh
   sudo reboot
