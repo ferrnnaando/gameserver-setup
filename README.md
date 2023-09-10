@@ -1,4 +1,4 @@
-# Ubuntu VPS Setup Guide
+![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/6e7d7c27-a46b-4b97-818a-7f4b7df6fb6c)# Ubuntu VPS Setup Guide
 
 Welcome to the comprehensive Ubuntu VPS Setup Guide! This guide will walk you through the process of setting up and configuring an Ubuntu VPS for various applications, including game servers and web hosting. Whether you're new to VPS administration or seeking to optimize your server's performance and security, this guide has you covered.
 
@@ -121,4 +121,10 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
 
    - Clone the official [cfx-server-data](https://github.com/citizenfx/cfx-server-data) with `git clone ` to your server dir (wich I decided to call it server-data to mantain a code understable).
      Then go to `server-data/` and create a `server.cfg`. You can do it with `touch server.cfg` and use this [template from pastebin](https://pastebin.com/VKrAfXmt). Remember to change the last `sv_licenseKey changeme` 
-     to a `sv_licenseKey ""` with your key generated in the keymaster.  
+     to a `sv_licenseKey ""` with your key generated in the keymaster.
+
+**5-. Running**:
+
+   - Once you execute in the `server-data/` dir the `bash ../run.sh +exec server.cfg` command.
+   > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/1b5de63f-9aed-459e-9616-4b39b6e72430)
+
