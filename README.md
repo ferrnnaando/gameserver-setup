@@ -30,7 +30,7 @@ If you are using VirtualBox for local development, there is an additional step t
 
 **1.3. SSH Connection**: Before we can log in through SSH, we will need an SSH client. For Windows, we strongly recommend using PuTTY. After installing the preferred SSH client, enter your IP and port 2222.
 
-- Login.
+   - Login.
 ![Login in SSH](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/b048e1d9-1d41-43cf-ab50-d7854533b679)
 ![Inside VPS 1.4](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/54109be2-ae7c-44d2-9dce-49953ca42044)
 
