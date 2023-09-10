@@ -32,6 +32,4 @@ If you are using VirtualBox for local development, there are a few additional st
 
 4. **SSH Connection**: Before we are able to login through SSH, we will need a SSH client of course. For Windows I strongly recommend using PuTTY. Windows RDP is completely unsafe and trash. After installing the prefered SSH client we need to put our own IP and port 2222.
 
-       - ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/3f3f6cb5-1c57-4792-9cb3-e4002bfe2a3d)
-
-   
+    - ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/b048e1d9-1d41-43cf-ab50-d7854533b679)
