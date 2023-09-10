@@ -1,4 +1,4 @@
-![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/093c7e4d-d835-40db-9f9c-61978befd12d)# Ubuntu VPS Setup Guide
+# Ubuntu VPS Setup Guide
 
 Welcome to the comprehensive Ubuntu VPS Setup Guide! This guide will walk you through the process of setting up and configuring an Ubuntu VPS for various applications, including game servers and web hosting. Whether you're new to VPS administration or seeking to optimize your server's performance and security, this guide has you covered.
 
