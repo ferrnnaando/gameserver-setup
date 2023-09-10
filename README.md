@@ -8,10 +8,11 @@ Welcome to the comprehensive Ubuntu VPS Setup Guide! This guide will walk you th
 
 Before you begin, ensure you have the following prerequisites:
 
-- **A Linux-based VPS**: In this guide, we'll demonstrate the setup using VirtualBox on your local machine.
-- **Medium to advanced knowledge of the Linux command line**: Deploying a server from the terminal can be more challenging than on Windows.
+- **A Linux-based VPS**: *In this guide, I'll demonstrate the setup using VirtualBox on your local machine.*
+- **Medium to advanced knowledge of the Linux command line**: *Deploying a server from the terminal can be more challenging than on Windows.*
+- **Basic to medium knowledge of Git commands**. 
 
-### Step 1: Setting Up Your VPS (SSH Handling + Localhost with VBox)
+### Step 1: Setting up VPS (SSH handling + localhost with VBox)
 
 **1-. [Enabling SSH:](https://ubuntu.com/server/docs/service-openssh)** *To use SSH in order you have to do a few things before; This step is not strictly required but highly recommended.*
 ```bash
@@ -20,7 +21,7 @@ sudo apt install openssh-server
 sudo systemctl enable ssh
 ```
 
-**1.2-. Port Forwarding:** *To allow VirtualBox to connect via SSH, it's recommended to set up port forwarding.*
+**1.2-. Port Forwarding**: *To allow VirtualBox to connect via SSH, it's recommended to set up port forwarding.*
 
    - Right-click on your Virtual Machine (VM) > Settings > Network > Adapter 1 (usually) > Port Forwarding.
    > ![Port Forwarding](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d7229cd7-591c-4634-8857-f323aed2a4fa)
@@ -135,3 +136,9 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
    - Go to [FiveM keymaster](https://keymaster.fivem.net/) and create one key. To fill in out you will need to know your public IP that can be found on webs like [whatismyippadr](https://whatismyipaddress.com/es/mi-ip)    and the host type, for this case Home Host && Vbox Ubuntu Server.*
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/e423ce7e-844f-4617-a493-e6d8209beebe)
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/53734d98-8bca-4863-855a-6b57571d4074)
+
+**4-. Making the core server::**
+
+   - For this step, we can install FileZilla and download the core from the FXServer main branch in our OS and transfer it to our VBox via Filezilla or directly doing it with git clone. I like to use the resources that      I have instead creating dumbs and slow roads of traffic, then lets use git.
+
+   - Install Git `sudo apt install`
