@@ -21,3 +21,5 @@ If you are running VBox you will have to make a few extra steps.
 Right-click on your VM > Settings > Network > Adapter 1 (Generally is this) > Port Forwardaing
 ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d7229cd7-591c-4634-8857-f323aed2a4fa)
 
+Then add a rule called SSH/TCP/../2222/../22. It should appear somethingl like this.
+![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d57c42ac-1603-4e69-bf1e-97bb0f735b01)
