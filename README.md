@@ -39,7 +39,6 @@ If you are using VirtualBox for local development, there is an additional step t
    - To handle the firewall, we will use UFW (Uncomplicated Firewall) and IPTables.
 
    ### UFW Configuration
-
    ```bash
    # Install UFW and enable it.
    sudo apt-get install ufw
@@ -70,4 +69,16 @@ If you are using VirtualBox for local development, there is an additional step t
 
    # Reboot the system to ensure changes was made.
    sudo reboot
+```
+
+### IPTables Configuration
+```bash
+# Similar to UFW, it's a good practice to deny all incoming traffic by default and only allow the specific services and ports that you need. You can do this with the following rules:
+sudo iptables -P INPUT DROP
+sudo iptables -P FORWARD DROP
+sudo iptables -P OUTPUT ACCEPT
+
+# Block the amount of login attempts. This can help to mitigate brute-force password attacks and other else. Why your VPS should have more than 3 persons on it? This is very confusing, bad-practice. Just remember to have smart workers that doesnt have to relogin each minute.
+
+sudo iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW -m limit --limit 3/min --limit-burst 3 -j ACCEPT
 ```
