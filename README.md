@@ -137,15 +137,16 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/e423ce7e-844f-4617-a493-e6d8209beebe)
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/53734d98-8bca-4863-855a-6b57571d4074)
 
-**4-. Making the core server**:
+**4-. Installation**:
 
-   - For this step, we can install FileZilla and download the core from the FXServer main branch in our OS and transfer it to our VBox via Filezilla or directly doing it with git clone. I like to use the resources that      I have instead creating dumbs and slow roads of traffic, then lets use git.
+   - For this step, we can install FileZilla and download the core from the FXServer main branch in our OS and transfer it to our VBox via Filezilla or directly doing it with git clone. I like to use the resources that      I have instead creating dumbs and slow roads 
+   of traffic, then lets use git.
 
    - Install Git `sudo apt install`. You can apply your best logic, for my case my logic will be that the server will be allocated on my user and nobody more will have permission to access.
-     Once allocated on my user folder `~/fernando/` execute `mkdir -p FXServer/server` and install the recommended branch build from the [Linux server build listing](https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/). After this, if you didnt found nothing like was my case. You can use this command `wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/6624-81fd97f8ee7def9f89fb2aafa99a13aadc045d10/fx.tar.xz && tar xf fx.tar.xz` in the parent dir `FXServer`.
+     Once allocated on my user folder `~/fernando/` execute `mkdir -p FXServer/server` and install the recommended branch build from the [Linux server build listing](https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/). After this, if you didnt found 
+     nothing like was my case. You can use this command `wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/6624-81fd97f8ee7def9f89fb2aafa99a13aadc045d10/fx.tar.xz && tar xf fx.tar.xz` in the parent dir `FXServer`.
 
    -  Now your parent dir should appear to something like this.
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/b1849b51-ad71-4d60-ba57-3b0809932dfe)
 
-   - Clone the official [cfx-server-data](https://github.com/citizenfx/cfx-server-data)
-
+   - Clone the official [cfx-server-data](https://github.com/citizenfx/cfx-server-data) with `git clone ` to your server dir (wich I decided to call it server-data to mantain a code understable).
