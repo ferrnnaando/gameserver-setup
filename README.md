@@ -27,7 +27,7 @@ If you are using VirtualBox for local development, there are a few additional st
 
 2. **ON/OFF Handling**: Since we are going to use SSH connections is very stupid to have the own VM window, so we can "disable"/unshow it. Just Right-Click > Start > Headless Start.
    
-![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
+    ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/618baada-35f9-415c-9d71-9cd5cfc9569a)
 I strongly recommend do the same for Stop > ACPI Shutdown.
 
 4. **SSH Connection**: Before we are able to login through SSH, we will need a SSH client of course. For Windows I strongly recommend using PuTTY. Windows RDP is completely unsafe and trash.
