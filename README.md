@@ -126,8 +126,13 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/41e3a058-2f32-40da-a977-27435481388c)
 
 
-**6-. Post-Intallation Issues**:
+**6-. Post-Intallation Misc**:
+   - **You have two options to create your FiveM server**: You can run the `run.sh` file that includes a txAdmin web-support dashboard and a bunch of server templates or making it vanilla as the explained way, if you decide to do it from txAdmin you don't need to load    artifacts since txAdmin handles all this process. I strongly recommend to use txAdmin, as is a official FiveM server client manager.
 
-## Warnings
+   ### - **Facing errors**:
+   - [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the       configured HttpClient.Timeout of 30 seconds elapsing; Uncomment `#sv_master ""` from `server.cfg`.
+
+### Warnings
+   - FiveM: txAdmin is a 
    - Port forwarding is essential both in your VM configuration and your system firewall settings. Without proper port forwarding, your server won't be accessible from outside your virtual machine, preventing you from playing on your host operating system.
    - I don't provide a Windows guide because configuring port forwarding on Windows is relatively straightforward. Linux is more commonly used for server management, hence the focus on Linux in this guide.
