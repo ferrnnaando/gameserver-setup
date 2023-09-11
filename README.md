@@ -122,8 +122,6 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
 **3.3-. Running**:
    - Once you execute in the `server-data/` dir the `bash ../run.sh +exec server.cfg` command.
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/1b5de63f-9aed-459e-9616-4b39b6e72430)
-
-   - Then, after forwarding ports in VBox and on the system firewall we are able to enter to the server.
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/41e3a058-2f32-40da-a977-27435481388c)
 
 ### Post-installation Misc
