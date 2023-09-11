@@ -10,9 +10,56 @@ Before you begin, ensure you have the following prerequisites:
 **1-. [Enabling SSH:](https://ubuntu.com/server/docs/service-openssh)** *To use SSH in order you have to do a few things before; This step is not strictly required but highly recommended.*
 
 ```bash
+# Enable SSH.
 sudo apt install openssh-client
 sudo apt install openssh-server
 sudo systemctl enable ssh
+
+# Enable MYSQL.
+sudo apt install mysql-server
+sudo systemctl enable ssh
+sudo mysql_secure_installation # This step is not strongly required but highly recommended.
+
+#For my case, that I losed the password and MYSQL doesnt gives me the power of create a account I will recover it.
+sudo systemctl stop mysql
+
+sudo mysqld_safe --skip-grant-tables &
+fernando@gamehost:~$ 2023-09-11T11:53:13.520630Z mysqld_safe Logging to '/var/log/mysql/error.log'.
+2023-09-11T11:53:13.524782Z mysqld_safe Directory '/var/run/mysqld' for UNIX socket file don't exists.
+
+# Lets fix that creating the required directories.
+sudo mkdir -p /var/log/mysql
+sudo mkdir -p /var/run/mysqld
+sudo chown -R mysql:mysql /var/log/mysql
+sudo chown -R mysql:mysql /var/run/mysqld
+
+# Then we are inside.
+fernando@gamehost:~$ 2023-09-11T11:54:12.615982Z mysqld_safe Logging to '/var/lo           g/mysql/error.log'.
+2023-09-11T11:54:12.657518Z mysqld_safe Starting mysqld daemon with databases fr           om /var/lib/mysql
+
+fernando@gamehost:~$ mysql -u root
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 7
+Server version: 8.0.34-0ubuntu0.23.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+>
+
+# Personally i don't really need to recover the root password, so it can still being losed, whe know how to recover it. Instead using root I will create a new user.
+mysql> CREATE USER 'fivem/ragemp'@'localhost' IDENTIFIED BY 'password';
+mysql> GRANT PRIVILEGE ON database.table TO 'fivem/ragemp'@'host';
+mysql> GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+mysql> FLUSH PRIVILEGES
+mysql> exit
+
+# Now we have a new account to use for our gameserver.
+mysql -u fivem/ragemp -p
 ```
 
 **1.2-. Port Forwarding**: *To allow VirtualBox to connect via SSH, it's recommended to set up port forwarding.*
