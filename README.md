@@ -1,14 +1,13 @@
-### Ubuntu VPS Setup Guide
+## Ubuntu VPS Setup Guide
 Welcome to the comprehensive Ubuntu VPS Setup Guide! This guide will walk you through the process of setting up and configuring an Ubuntu VPS for various applications, including game servers and web hosting. Whether you're new to VPS administration or seeking to optimize your server's performance and security, this guide has you covered.
 
-## Installing on FiveM
-### Prerequisites
 Before you begin, ensure you have the following prerequisites:
 
 - **A Linux-based VPS**: *In this guide, I'll demonstrate the setup using VirtualBox on your local machine.*
 - **Medium to advanced knowledge of the Linux command line**: *Deploying a server from the terminal can be more challenging than on Windows.*
-- **Basic to medium knowledge of Git commands**. 
-
+- **Basic to medium knowledge of Git commands**.
+  
+### Installing on FiveM
 ### Step 1: Setting up VPS (SSH handling + localhost with VBox)
 **1-. [Enabling SSH:](https://ubuntu.com/server/docs/service-openssh)** *To use SSH in order you have to do a few things before; This step is not strictly required but highly recommended.*
 ```bash
