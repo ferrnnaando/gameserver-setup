@@ -6,9 +6,8 @@ Before you begin, ensure you have the following prerequisites:
 - **A Linux-based VPS**: *In this guide, I'll demonstrate the setup using VirtualBox on your local machine.*
 - **Medium to advanced knowledge of the Linux command line**: *Deploying a server from the terminal can be more challenging than on Windows.*
 - **Basic to medium knowledge of Git commands**.
-  
-### Installing on FiveM
-### Step 1: Setting up VPS (SSH handling + localhost with VBox)
+
+## Common configuration
 **1-. [Enabling SSH:](https://ubuntu.com/server/docs/service-openssh)** *To use SSH in order you have to do a few things before; This step is not strictly required but highly recommended.*
 ```bash
 sudo apt install openssh-client
@@ -34,7 +33,10 @@ sudo systemctl enable ssh
    > ![Login in SSH](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/b048e1d9-1d41-43cf-ab50-d7854533b679)
    > ![Inside VPS 1.4](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/54109be2-ae7c-44d2-9dce-49953ca42044)
 
-**2-. Firewall and Services Handling**: *The most critical step is the firewall. Without a good firewall, we risk security issues and server instability.*
+### Installing on FiveM
+### Step 2: Setting up VPS (Firewall + Server Core)
+
+**2-. Firewall and Services Handling**: *Another of the most critical step is the firewall. Without a good firewall, we risk security issues and server instability.*
    - To handle the firewall, we will use UFW (Uncomplicated Firewall) and IPTables.
 
    ### UFW
