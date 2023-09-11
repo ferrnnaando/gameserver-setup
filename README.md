@@ -133,6 +133,5 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
    - *[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the       configured HttpClient.Timeout of 30 seconds elapsing*; Uncomment `#sv_master ""` from `server.cfg`.
 
 ### Warnings
-   - FiveM: txAdmin is a 
    - Port forwarding is essential both in your VM configuration and your system firewall settings. Without proper port forwarding, your server won't be accessible from outside your virtual machine, preventing you from playing on your host operating system.
    - I don't provide a Windows guide because configuring port forwarding on Windows is relatively straightforward. Linux is more commonly used for server management, hence the focus on Linux in this guide.
