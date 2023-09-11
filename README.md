@@ -61,6 +61,10 @@ sudo systemctl enable ssh
    sudo ufw allow 30110/udp  # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
    sudo ufw allow 30120/tcp  # FiveM Protocol (specified in server.cfg)
    sudo ufw allow 30120/udp  # FiveM Server (modification of GTA V) uses TCP ports 30120 and 30110.
+   sudo ufw allow 40120/tcp  # FiveM server txAdmin Protocol
+   sudo ufw allow 40120/udp  # FiveM server txAdmin Protocol
+   sudo ufw allow 40110/tcp  # FiveM server txAdmin Protocol
+   sudo ufw allow 40110/udp  # FiveM server txAdmin Protocol 
 
    # Set default policies.
    sudo ufw default deny incoming
