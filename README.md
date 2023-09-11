@@ -26,8 +26,9 @@ sudo systemctl enable ssh
    - Right-click on your Virtual Machine (VM) > Settings > Network > Adapter 1 (usually) > Port Forwarding.
    > ![Port Forwarding](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d7229cd7-591c-4634-8857-f323aed2a4fa)
 
-   - Add a port forwarding rule named SSH/TCP/../2222/../22. It should look something like this.
-   > ![Port Forwarding Rule](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/d57c42ac-1603-4e69-bf1e-97bb0f735b01)
+   - Copy these ports rules, it should appear to something like that. Discourage about the protocol defined names.
+   > ![Port Forwading Rules](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/3da77abd-c506-4943-9515-13258faa55bf)
+
 
 **1.3-. ON/OFF Handling**: *Since we are going to use SSH connections, it's a good idea to disable or hide the VM window.*
 
