@@ -2,13 +2,13 @@
 Welcome to the comprehensive Ubuntu VPS Setup Guide! This guide will walk you through the process of setting up and configuring an Ubuntu VPS for various applications, including game servers and web hosting. Whether you're new to VPS administration or seeking to optimize your server's performance and security, this guide has you covered.
 
 Before you begin, ensure you have the following prerequisites:
-
 - **A Linux-based VPS**: *In this guide, I'll demonstrate the setup using VirtualBox on your local machine.*
 - **Medium to advanced knowledge of the Linux command line**: *Deploying a server from the terminal can be more challenging than on Windows.*
 - **Basic to medium knowledge of Git commands**.
 
 ## Common configuration
 **1-. [Enabling SSH:](https://ubuntu.com/server/docs/service-openssh)** *To use SSH in order you have to do a few things before; This step is not strictly required but highly recommended.*
+
 ```bash
 sudo apt install openssh-client
 sudo apt install openssh-server
@@ -34,8 +34,7 @@ sudo systemctl enable ssh
    > ![Inside VPS 1.4](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/54109be2-ae7c-44d2-9dce-49953ca42044)
 
 ### Installing on FiveM
-### Step 2: Setting up VPS (Firewall + Server Core)
-
+### Step 2: Setting up Firewall
 **2-. Firewall and Services Handling**: *Another of the most critical step is the firewall. Without a good firewall, we risk security issues and server instability.*
    - To handle the firewall, we will use UFW (Uncomplicated Firewall) and IPTables.
 
@@ -98,12 +97,13 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
 ### Adittional considerations
 **Consideer using Fail2ban:** *Consider using Fail2ban to protect against brute-force login attempts. It can automatically block IP addresses that repeatedly fail login attempts.*
 
+### Step 3: Setting up server core
 **3-. Keymaster** *Once we have a good securitty we can continue.*
    - Go to [FiveM keymaster](https://keymaster.fivem.net/) and create one key. To fill in out you will need to know your public IP that can be found on webs like [whatismyippadr](https://whatismyipaddress.com/es/mi-ip)    and the host type, for this case Home Host &&     Vbox Ubuntu Server.*
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/e423ce7e-844f-4617-a493-e6d8209beebe)
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/53734d98-8bca-4863-855a-6b57571d4074)
 
-**4-. Installation**:
+**3.2-. Installation**:
    - For this step, we can install FileZilla and download the core from the FXServer main branch in our OS and transfer it to our VBox via Filezilla or directly doing it with git clone. I like to use the resources that      I have instead creating dumbs and slow roads 
     of traffic, then lets use git.
 
@@ -119,21 +119,22 @@ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
      Then go to `server-data/` and create a `server.cfg`. You can do it with `touch server.cfg` and use this [template from pastebin](https://pastebin.com/VKrAfXmt). Remember to change the last `sv_licenseKey changeme` 
      to a `sv_licenseKey ""` with your key generated in the keymaster.
 
-**5-. Running**:
+**3.3-. Running**:
    - Once you execute in the `server-data/` dir the `bash ../run.sh +exec server.cfg` command.
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/1b5de63f-9aed-459e-9616-4b39b6e72430)
 
    - Then, after forwarding ports in VBox and on the system firewall we are able to enter to the server.
    > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/41e3a058-2f32-40da-a977-27435481388c)
 
-
-**6-. Post-Intallation Misc**:
-   - **You have two options to create your FiveM server**: You can run the `run.sh` file that includes a txAdmin web-support dashboard and a bunch of server templates or making it vanilla as the explained way, if you decide to do it from txAdmin you don't need to load    artifacts since txAdmin handles all this process. I strongly recommend to use txAdmin, as is a official FiveM server client manager.
+### Post-installation Misc
+   - **You have two options to create your FiveM server**: You can run the `run.sh` file that includes a txAdmin web-support dashboard and a bunch of server templates or making it vanilla as the explained way, if you 
+   decide to do it from txAdmin you don't need to load    artifacts since txAdmin handles all this process. I strongly recommend to use txAdmin, as is a official FiveM server client manager.
 
    ### - **Facing errors**:
-   - *[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- 
-   System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing*; Uncomment `#sv_master1 ""` from `server.cfg`.
+   > - *[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- 
+   > System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing*; Uncomment `#sv_master1 ""` from `server.cfg`.
 
 ### Warnings
-   - Port forwarding is essential both in your VM configuration and your system firewall settings. Without proper port forwarding, your server won't be accessible from outside your virtual machine, preventing you from playing on your host operating system.
+   - Port forwarding is essential both in your VM configuration and your system firewall settings. Without proper port forwarding, your server won't be accessible from outside your virtual machine, preventing you from 
+    playing on your host operating system.
    - I don't provide a Windows guide because configuring port forwarding on Windows is relatively straightforward. Linux is more commonly used for server management, hence the focus on Linux in this guide.
