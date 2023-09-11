@@ -1,6 +1,8 @@
 ## Ubuntu VPS Setup Guide
 Welcome to the comprehensive Ubuntu VPS Setup Guide! This guide will walk you through the process of setting up and configuring an Ubuntu VPS for various applications, including game servers and web hosting. Whether you're new to VPS administration or seeking to optimize your server's performance and security, this guide has you covered.
 
+- I don't provide a Windows guide because configuring port forwarding on Windows is relatively straightforward. Linux is more commonly used for server management, hence the focus on Linux in this guide.
+
 Before you begin, ensure you have the following prerequisites:
 - **A Linux-based VPS**: *In this guide, I'll demonstrate the setup using VirtualBox on your local machine.*
 - **Medium to advanced knowledge of the Linux command line**: *Deploying a server from the terminal can be more challenging than on Windows.*
@@ -186,13 +188,6 @@ set mysql_connection_string “server=127.0.0.01;database=essentialmode;userid=r
 ### - **Facing errors**:
 > - *[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- 
 > System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing*; Uncomment `#sv_master1 ""` from `server.cfg`.
-
-
-
-### Warnings
-- Port forwarding is essential both in your VM configuration and your system firewall settings. Without proper port forwarding, your server won't be accessible from outside your virtual machine, preventing you from 
-playing on your host operating system.
-- I don't provide a Windows guide because configuring port forwarding on Windows is relatively straightforward. Linux is more commonly used for server management, hence the focus on Linux in this guide.
 
 ## Installing on RageMp
 ### Step 2: Setting up Firewall
