@@ -176,9 +176,18 @@ to a `sv_licenseKey ""` with your key generated in the keymaster.
 - **You have two options to create your FiveM server**: You can run the `run.sh` file that includes a txAdmin web-support dashboard and a bunch of server templates or making it vanilla as the explained way, if you 
 decide to do it from txAdmin you don't need to load    artifacts since txAdmin handles all this process. I strongly recommend to use txAdmin, as is a official FiveM server client manager.
 
+- **You can setup MYSQL**: Its very easy to make your FiveM server uses a MYSQL schema.
+```bash
+# Add this before the endpoint connect definition.
+set es_enableCustomData 1
+set mysql_connection_string “server=127.0.0.01;database=essentialmode;userid=root;”
+```
+
 ### - **Facing errors**:
 > - *[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- 
 > System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing*; Uncomment `#sv_master1 ""` from `server.cfg`.
+
+
 
 ### Warnings
 - Port forwarding is essential both in your VM configuration and your system firewall settings. Without proper port forwarding, your server won't be accessible from outside your virtual machine, preventing you from 
