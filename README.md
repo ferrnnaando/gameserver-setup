@@ -122,26 +122,26 @@ mysql -u fivem/ragemp -p
 
    # Reboot the system to ensure changes was made.
    sudo reboot
-```
+   ```
 
-### IPTables
-```bash
-# Similar to UFW, it's a good practice to deny all incoming traffic by default and only allow the specific services and ports that you need. You can do this with the following rules:
-sudo iptables -P INPUT DROP
-sudo iptables -P FORWARD DROP
-sudo iptables -P OUTPUT ACCEPT
-
-# Block the amount of login attempts. This can help to mitigate brute-force password attacks and other else. Why your VPS should have more than 3 persons on it? This is very confusing, bad-practice. Just remember to have smart workers that doesnt have to relogin each minute.
-sudo iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW -m limit --limit 3/min --limit-burst 3 -j ACCEPT
-
-# You can log denied packets to monitore what's happening.
-sudo iptables -A INPUT -j LOG --log-prefix "IPTABLES-DROP: "
-
-# You can block specifics IP's
-sudo iptables -A INPUT -s 192.168.1.100 -j DROP
-
-# And a lot more, but this is more than enough, this can consideer a good firewall configuration
-```
+   ### IPTables
+   ```bash
+   # Similar to UFW, it's a good practice to deny all incoming traffic by default and only allow the specific services and ports that you need. You can do this with the following rules:
+   sudo iptables -P INPUT DROP
+   sudo iptables -P FORWARD DROP
+   sudo iptables -P OUTPUT ACCEPT
+   
+   # Block the amount of login attempts. This can help to mitigate brute-force password attacks and other else. Why your VPS should have more than 3 persons on it? This is very confusing, bad-practice. Just remember to have smart workers that doesnt have to relogin each minute.
+   sudo iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW -m limit --limit 3/min --limit-burst 3 -j ACCEPT
+   
+   # You can log denied packets to monitore what's happening.
+   sudo iptables -A INPUT -j LOG --log-prefix "IPTABLES-DROP: "
+   
+   # You can block specifics IP's
+   sudo iptables -A INPUT -s 192.168.1.100 -j DROP
+   
+   # And a lot more, but this is more than enough, this can consideer a good firewall configuration
+   ```
 
 ### Adittional considerations
 **Consideer using Fail2ban:** *Consider using Fail2ban to protect against brute-force login attempts. It can automatically block IP addresses that repeatedly fail login attempts.*
