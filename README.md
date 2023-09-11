@@ -170,9 +170,12 @@ Then go to `server-data/` and create a `server.cfg`. You can do it with `touch s
 to a `sv_licenseKey ""` with your key generated in the keymaster.
 
 **3.3-. Running**:
-- Once you execute in the `server-data/` dir the `bash ../run.sh +exec server.cfg` command.
+- Once you execute in the `server-data/` dir the `bash ../run.sh +exec server.cfg` command. It can appear really ugly, and is it, but only who have knowledge in FiveM programming knows that powerful things can be made.
 > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/1b5de63f-9aed-459e-9616-4b39b6e72430)
 > ![image](https://github.com/ferrnnaando/fivem-gameserver-setup/assets/77246868/41e3a058-2f32-40da-a977-27435481388c)
+> ![image](https://github.com/ferrnnaando/gameserver-setup/assets/77246868/f5ac515b-7dac-4827-b851-965a1b5cfc22)
+> ![image](https://github.com/ferrnnaando/gameserver-setup/assets/77246868/382709d1-2dab-4d30-8ed9-72ba6bf0cb12)
+
 
 ### Post-installation Misc
 - **You have two options to create your FiveM server**: You can run the `run.sh` file that includes a txAdmin web-support dashboard and a bunch of server templates or making it vanilla as the explained way, if you 
