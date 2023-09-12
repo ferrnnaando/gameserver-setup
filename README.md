@@ -188,6 +188,11 @@ set es_enableCustomData 1
 set mysql_connection_string “server=127.0.0.01;database=essentialmode;userid=root;”
 ```
 
+- **Openning to the public**: In case that you wanna join someones to your server you can use *ngrok*. I don't like router port forwarding because this is creating a vulnerability on the router, so I just would do port forwarding in external services. You can install ngrok and do this: Execute your server > Expose tcp 30120 port. Something like this:
+> ![image](https://github.com/ferrnnaando/gameserver-setup/assets/77246868/07324d73-9129-411e-b851-d032a83d444d)
+> ![image](https://github.com/ferrnnaando/gameserver-setup/assets/77246868/8ccc9919-46ec-4742-8838-7d610a42f490)
+
+
 ### - **Facing errors**:
 > - *[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- 
 > System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing*; Uncomment `#sv_master1 ""` from `server.cfg`.
